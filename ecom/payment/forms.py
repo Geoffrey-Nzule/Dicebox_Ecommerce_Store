@@ -31,3 +31,6 @@ class PaymentForm(forms.Form):
 	card_country =  forms.CharField(label="", widget=forms.TextInput(attrs={'class':'form-control', 'placeholder':'Billing Country'}), required=True)
  
 
+class PaymentForm(forms.Form):
+    phone_number = forms.CharField(label='Phone Number', max_length=15)
+    amount = forms.IntegerField(label='Amount', min_value=1, max_value=250000)

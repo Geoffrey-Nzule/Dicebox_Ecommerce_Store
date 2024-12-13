@@ -25,7 +25,7 @@
             {% for product in cart_products %}
                 {{ product.name }}: 
                     {% if product.is_sale %}
-                        ${{ product.sale_price }}
+                        Ksh{{ product.sale_price }}
                     {% else %}
                         ${{ product.price }}
                 {% endif %}
@@ -40,7 +40,7 @@
                 <br/><br/>
 
             {% endfor %}
-            Total:  ${{ totals }}
+            Total:  Ksh{{ totals }}
             <br/><br/>
             <a href="{% url 'cart_summary' %}" class="btn btn-sm btn-outline-secondary">Update Items</a>
           </div>
